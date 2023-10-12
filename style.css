@@ -1,0 +1,130 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efe8e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+:root{
+    --brown:#a52a2a;
+    --white: #fff;
+    --width-size: 90%;
+    --height-size:500px;
+    --radius: 8px;
+    --padding-size: 10px;
+}
+h2, h4, h5{
+    text-align: center;
+    font-weight: bold;
+}
+.app-container{
+    width: var(--width-size);
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+    height: var(--height-size);
+    padding: var(--padding-size);
+    max-width: 300px;
+    overflow-y: scroll;
+}
+.app-container::-webkit-scrollbar{
+    width: 0 !important;
+}
+.addTask{
+    border-radius: var(--radius);
+    padding: 5px;
+    background-color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plus{
+    padding: 3px 8px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: var(--white);
+    background-color: var(--brown);
+}
+#task{
+    display: grid;
+    gap: 10px;
+}
+#task div{
+    background-color: var(--brown);
+    color: var(--white);
+    padding: var(--padding-size);
+    border-radius: var(--radius);
+}
+.fa-solid{
+    margin: 5px;
+    cursor: pointer;
+}
+.overlay{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.popUp{
+    visibility: visible;
+}
+
+/*modal pop up*/
+.modal{
+    width: var(--width-size);
+    background-color: var(--white);
+    padding: var(--padding-size);
+    height: var(--height-size);
+    border: 2px solid #efe8e2;
+    position: absolute;
+    z-index: 2;
+    max-width: 300px;
+}
+.overlay::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+}
+.close{
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+.details{
+    display: grid;
+}
+input{
+    padding: var(--padding-size);
+    outline: none;
+    border: 1px solid #ccc;
+}
+#msg{
+    color: red;
+}
+textarea{
+    outline: none;
+}
+button{
+    background-color: #000ff0;
+    padding: var(--padding-size);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

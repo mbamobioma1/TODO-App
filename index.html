@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <script src="https://kit.fontawesome.com/58b7424050.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+       <div class="app-container">
+            <h2>TODO App</h2>
+            <span class="addTask">
+                <span>Add New Task</span>
+                <i class="plus">&plus;</i>
+            </span>
+            <h4>Tasks</h4>
+            <div id="task">
+            <div>
+                <p>Task1</p>
+                <p>10 - 10 - 2023</p>
+                <p>I will build TODO App today</p>
+                <span class="option">
+                    <i onClick="editTask(this)" class="fa-solid fa-pen-to-square" id="edit"></i>
+                    <i onClick="deleteTask(this)" class="fa-solid fa-trash-can"></i>
+                </span>
+            </div>
+        </div>
+        </div>
+        <div class="overlay">
+        <!--modal-->
+        <div class="modal">
+            <form id="form">
+                <div class="header">
+                    <p>Add New Task</p>
+                    <i class="close">&times;</i>
+                </div>
+                <br>
+                <div class="details">
+                <label for="inputText">Task Title</label>
+                <br><br>
+                <input type="text" id="inputText">
+                <div id="msg"></div>
+                <br><br>
+                <label for="inputDate">Event Date</label>
+                <br><br>
+                <input type="date" id="inputDate">
+                <br><br>
+                <label for="description">Descritption</label>
+                <br><br>
+                <textarea name="" id="description" cols="30" rows="10"></textarea>
+                <br>
+               </div>
+                <button type="submit" id="submit">Add</button>
+                <br>
+            </form>
+        </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
